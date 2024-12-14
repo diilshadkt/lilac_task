@@ -7,10 +7,10 @@ class AuthService {
   final dio = Dio();
   static const link = ApiConstants.baseUrl;
   static const loginLink = ApiConstants.login;
-  Future<AuthModel> login(String name, String password) async{
+  Future<AuthModel> login(String email, String password) async{
     try {
       final data = FormData.fromMap({
-        'username': name,
+        'email': email,
         'password': password,
       });
       final response = await dio.post(loginLink, data: data);
