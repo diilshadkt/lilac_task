@@ -14,12 +14,12 @@ T _$identity<T>(T value) => value;
 final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
-Welcome _$WelcomeFromJson(Map<String, dynamic> json) {
-  return _Welcome.fromJson(json);
+AuthModel _$AuthModelFromJson(Map<String, dynamic> json) {
+  return _AuthModel.fromJson(json);
 }
 
 /// @nodoc
-mixin _$Welcome {
+mixin _$AuthModel {
   @JsonKey(name: "status")
   bool get status => throw _privateConstructorUsedError;
   @JsonKey(name: "message")
@@ -29,19 +29,20 @@ mixin _$Welcome {
   @JsonKey(name: "token")
   String get token => throw _privateConstructorUsedError;
 
-  /// Serializes this Welcome to a JSON map.
+  /// Serializes this AuthModel to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
 
-  /// Create a copy of Welcome
+  /// Create a copy of AuthModel
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  $WelcomeCopyWith<Welcome> get copyWith => throw _privateConstructorUsedError;
+  $AuthModelCopyWith<AuthModel> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $WelcomeCopyWith<$Res> {
-  factory $WelcomeCopyWith(Welcome value, $Res Function(Welcome) then) =
-      _$WelcomeCopyWithImpl<$Res, Welcome>;
+abstract class $AuthModelCopyWith<$Res> {
+  factory $AuthModelCopyWith(AuthModel value, $Res Function(AuthModel) then) =
+      _$AuthModelCopyWithImpl<$Res, AuthModel>;
   @useResult
   $Res call(
       {@JsonKey(name: "status") bool status,
@@ -53,16 +54,16 @@ abstract class $WelcomeCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$WelcomeCopyWithImpl<$Res, $Val extends Welcome>
-    implements $WelcomeCopyWith<$Res> {
-  _$WelcomeCopyWithImpl(this._value, this._then);
+class _$AuthModelCopyWithImpl<$Res, $Val extends AuthModel>
+    implements $AuthModelCopyWith<$Res> {
+  _$AuthModelCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of Welcome
+  /// Create a copy of AuthModel
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
@@ -92,7 +93,7 @@ class _$WelcomeCopyWithImpl<$Res, $Val extends Welcome>
     ) as $Val);
   }
 
-  /// Create a copy of Welcome
+  /// Create a copy of AuthModel
   /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
@@ -104,10 +105,11 @@ class _$WelcomeCopyWithImpl<$Res, $Val extends Welcome>
 }
 
 /// @nodoc
-abstract class _$$WelcomeImplCopyWith<$Res> implements $WelcomeCopyWith<$Res> {
-  factory _$$WelcomeImplCopyWith(
-          _$WelcomeImpl value, $Res Function(_$WelcomeImpl) then) =
-      __$$WelcomeImplCopyWithImpl<$Res>;
+abstract class _$$AuthModelImplCopyWith<$Res>
+    implements $AuthModelCopyWith<$Res> {
+  factory _$$AuthModelImplCopyWith(
+          _$AuthModelImpl value, $Res Function(_$AuthModelImpl) then) =
+      __$$AuthModelImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -121,14 +123,14 @@ abstract class _$$WelcomeImplCopyWith<$Res> implements $WelcomeCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$WelcomeImplCopyWithImpl<$Res>
-    extends _$WelcomeCopyWithImpl<$Res, _$WelcomeImpl>
-    implements _$$WelcomeImplCopyWith<$Res> {
-  __$$WelcomeImplCopyWithImpl(
-      _$WelcomeImpl _value, $Res Function(_$WelcomeImpl) _then)
+class __$$AuthModelImplCopyWithImpl<$Res>
+    extends _$AuthModelCopyWithImpl<$Res, _$AuthModelImpl>
+    implements _$$AuthModelImplCopyWith<$Res> {
+  __$$AuthModelImplCopyWithImpl(
+      _$AuthModelImpl _value, $Res Function(_$AuthModelImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of Welcome
+  /// Create a copy of AuthModel
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
@@ -138,7 +140,7 @@ class __$$WelcomeImplCopyWithImpl<$Res>
     Object? data = null,
     Object? token = null,
   }) {
-    return _then(_$WelcomeImpl(
+    return _then(_$AuthModelImpl(
       status: null == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
@@ -161,15 +163,15 @@ class __$$WelcomeImplCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$WelcomeImpl implements _Welcome {
-  const _$WelcomeImpl(
+class _$AuthModelImpl implements _AuthModel {
+  const _$AuthModelImpl(
       {@JsonKey(name: "status") required this.status,
       @JsonKey(name: "message") required this.message,
       @JsonKey(name: "data") required this.data,
       @JsonKey(name: "token") required this.token});
 
-  factory _$WelcomeImpl.fromJson(Map<String, dynamic> json) =>
-      _$$WelcomeImplFromJson(json);
+  factory _$AuthModelImpl.fromJson(Map<String, dynamic> json) =>
+      _$$AuthModelImplFromJson(json);
 
   @override
   @JsonKey(name: "status")
@@ -186,14 +188,14 @@ class _$WelcomeImpl implements _Welcome {
 
   @override
   String toString() {
-    return 'Welcome(status: $status, message: $message, data: $data, token: $token)';
+    return 'AuthModel(status: $status, message: $message, data: $data, token: $token)';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$WelcomeImpl &&
+            other is _$AuthModelImpl &&
             (identical(other.status, status) || other.status == status) &&
             (identical(other.message, message) || other.message == message) &&
             (identical(other.data, data) || other.data == data) &&
@@ -204,30 +206,31 @@ class _$WelcomeImpl implements _Welcome {
   @override
   int get hashCode => Object.hash(runtimeType, status, message, data, token);
 
-  /// Create a copy of Welcome
+  /// Create a copy of AuthModel
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$WelcomeImplCopyWith<_$WelcomeImpl> get copyWith =>
-      __$$WelcomeImplCopyWithImpl<_$WelcomeImpl>(this, _$identity);
+  _$$AuthModelImplCopyWith<_$AuthModelImpl> get copyWith =>
+      __$$AuthModelImplCopyWithImpl<_$AuthModelImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$WelcomeImplToJson(
+    return _$$AuthModelImplToJson(
       this,
     );
   }
 }
 
-abstract class _Welcome implements Welcome {
-  const factory _Welcome(
+abstract class _AuthModel implements AuthModel {
+  const factory _AuthModel(
       {@JsonKey(name: "status") required final bool status,
       @JsonKey(name: "message") required final String message,
       @JsonKey(name: "data") required final Data data,
-      @JsonKey(name: "token") required final String token}) = _$WelcomeImpl;
+      @JsonKey(name: "token") required final String token}) = _$AuthModelImpl;
 
-  factory _Welcome.fromJson(Map<String, dynamic> json) = _$WelcomeImpl.fromJson;
+  factory _AuthModel.fromJson(Map<String, dynamic> json) =
+      _$AuthModelImpl.fromJson;
 
   @override
   @JsonKey(name: "status")
@@ -242,11 +245,11 @@ abstract class _Welcome implements Welcome {
   @JsonKey(name: "token")
   String get token;
 
-  /// Create a copy of Welcome
+  /// Create a copy of AuthModel
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$WelcomeImplCopyWith<_$WelcomeImpl> get copyWith =>
+  _$$AuthModelImplCopyWith<_$AuthModelImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
