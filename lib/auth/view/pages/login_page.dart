@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:lilac_task/auth/view/widgets/submit_button_widget.dart';
 import 'package:lilac_task/auth/view/widgets/textfield_widget.dart';
 
 class LoginPage extends StatelessWidget {
@@ -88,7 +89,36 @@ class LoginPage extends StatelessWidget {
                   const SizedBox(
                     height: 6,
                   ),
-                
+                  Padding(
+                    padding: EdgeInsets.only(
+                        left: MediaQuery.sizeOf(context).width / 1.63),
+                    child: const Text(
+                      "Forgot Password?",
+                      style: TextStyle(
+                          color: Colors.blue,
+                          fontSize: 12,
+                          fontWeight: FontWeight.w700),
+                    ),
+                  ),
+                  const SizedBox(
+                    height: 170,
+                  ),
+                  const SubmitButtonWidget(),
+                  const SizedBox(height: 10),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      const Text("Don't have an account?"),
+                      const SizedBox(
+                        width: 5,
+                      ),
+                      InkWell(
+                        child: const Text("Register",
+                            style: TextStyle(color: Colors.blue)),
+                        onTap: () {},
+                      )
+                    ],
+                  ),
                 ],
               ),
             )
