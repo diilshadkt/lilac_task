@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:lilac_task/auth/view/widgets/submit_button_widget.dart';
-import 'package:lilac_task/auth/view/widgets/textfield_widget.dart';
+import 'package:lilac_task/features/auth/view/widgets/submit_button_widget.dart';
+import 'package:lilac_task/features/auth/view/widgets/textfield_widget.dart';
 
 class LoginPage extends StatelessWidget {
   const LoginPage({super.key});
