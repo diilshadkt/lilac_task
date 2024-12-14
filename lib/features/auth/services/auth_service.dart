@@ -19,6 +19,8 @@ class AuthService {
       } else {
         throw ApiException(statusCode: response.statusCode.toString());
       }
+    }on DioException catch (_) {
+      rethrow;
     }
   }
 }
