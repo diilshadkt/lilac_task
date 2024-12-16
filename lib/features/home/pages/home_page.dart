@@ -57,7 +57,11 @@ class HomePage extends StatelessWidget {
                 DashboardItemWidget(
                     imagePath: "assets/images/img_sale.svg",
                     count: "35",
-                    text: "Vehicle for Sale")
+                    text: "Vehicle for Sale"),
+                DashboardItemWidget(
+                    imagePath: "assets/images/img_sale.svg",
+                    count: "35",
+                    text: "Vehicle for Sale"),
               ],
             )
           ],
