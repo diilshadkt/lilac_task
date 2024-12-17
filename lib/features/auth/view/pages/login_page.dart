@@ -4,6 +4,7 @@ import 'package:lilac_task/features/auth/view/widgets/submit_button_widget.dart'
 import 'package:lilac_task/features/auth/view/widgets/textfield_widget.dart';
 
 class LoginPage extends StatelessWidget {
+  static const routePath = "/login";
   const LoginPage({super.key});
 
   @override

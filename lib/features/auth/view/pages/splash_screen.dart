@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class SplashScreen extends StatelessWidget {
+  static const routePath = "/splash";
   const SplashScreen({super.key});
 
   @override

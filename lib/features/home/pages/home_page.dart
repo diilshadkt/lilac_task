@@ -3,6 +3,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:lilac_task/features/home/widgets/dashboard_item_widget.dart';
 
 class HomePage extends StatelessWidget {
+  static const routePath = "/home";
   const HomePage({super.key});
 
   @override
@@ -54,10 +55,6 @@ class HomePage extends StatelessWidget {
                     imagePath: "assets/images/img_C2B concept.svg",
                     count: "25",
                     text: "C2B Concept"),
-                DashboardItemWidget(
-                    imagePath: "assets/images/img_sale.svg",
-                    count: "35",
-                    text: "Vehicle for Sale"),
                 DashboardItemWidget(
                     imagePath: "assets/images/img_sale.svg",
                     count: "35",
