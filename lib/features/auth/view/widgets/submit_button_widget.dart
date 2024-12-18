@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 
 class SubmitButtonWidget extends StatelessWidget {
-  // final VoidCallback onPressed;
-  const SubmitButtonWidget({super.key});
+  final VoidCallback onPressed;
+  final Widget child;
+  const SubmitButtonWidget({super.key, required this.onPressed,required this.child});
 
   @override
   Widget build(BuildContext context) {
@@ -19,11 +20,8 @@ class SubmitButtonWidget extends StatelessWidget {
             backgroundColor: const Color.fromARGB(255, 71, 46, 36),
             shape: ContinuousRectangleBorder(
                 borderRadius: BorderRadius.circular(15))),
-        onPressed: () {},
-        child: const Text(
-          "Login",
-          style: TextStyle(color: Colors.white),
-        ),
+        onPressed: onPressed,
+        child: child,
       ),
     );
   }

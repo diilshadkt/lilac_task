@@ -4,12 +4,15 @@ class TextfieldWidget extends StatelessWidget {
   final Widget preffixIcon;
   final String hintText;
   final Widget? suffixIcon;
+  final TextEditingController? controller;
 
   const TextfieldWidget(
       {super.key,
       required this.preffixIcon,
       required this.hintText,
-      this.suffixIcon});
+      this.suffixIcon,
+      this.controller
+      });
 
   @override
   Widget build(BuildContext context) {
@@ -18,6 +21,7 @@ class TextfieldWidget extends StatelessWidget {
       decoration: BoxDecoration(
           color: Colors.white, borderRadius: BorderRadius.circular(8)),
       child: TextFormField(
+        controller: controller,
         decoration: InputDecoration(
           focusedBorder: const OutlineInputBorder(
             borderSide: BorderSide.none,
